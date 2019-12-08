@@ -15,9 +15,9 @@ body{
 	font-family: "Segoe UI", sans-serif;
 	line-height: 135%  
 }
-
+		/*text:about us, sign in , log in*/
 a{
-	color: #f48b8b;
+	color: #696969;
 	text-decoration: none;
 	transition: all.6s ease;
 	-moz-transition: all.6s ease;
@@ -26,7 +26,7 @@ a{
 }
 
 a:hover {						/*ссылка при наведении*/						
-	color: #8b9ff5;
+	color: black;
 	text-decoration: none;
 	transition: all.6s ease;
 	-moz-transition: all.6s ease;
@@ -74,7 +74,7 @@ header{
 #logo{
 	font-size: 1.3em;
 	font-family: Comic Sans MS, sans-serif;
-	color: pink; 
+	color: #003366; 
 }
 
 .contact{
@@ -256,7 +256,7 @@ form input {
 }
 
 form input:focus, form textarea:focus {		/*когда нажали на поле*/
-	border: 2px solid #f58b8b;
+	border: 2px solid #191970;
 }
 
 form textarea{
@@ -273,7 +273,7 @@ form textarea{
 form #send{
 	float: left;
 	padding: 5px;
-	background-color: #f5bdbd;
+	background-color: #003366;
 	cursor: pointer;
 	border-radius: 5px;
 	margin-top: 10px;
@@ -310,12 +310,13 @@ form #send:hover{		/*эффект при наведении*/
 	max-width: 98%;
 }
 
+	/*start now bottom*/
 #main_soc_block_in a{
 	float: left;
 	padding:  5px;
-	background-color: pink;
+	background-color: #003366;
 	border-radius: 6px;
-	color: #424242;
+	color: white;
 	margin-left: 40%;
 
 }
