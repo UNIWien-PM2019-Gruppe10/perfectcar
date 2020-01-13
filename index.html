@@ -10,69 +10,102 @@
 	</head>
 
 	<body>
-		<div id="page-wrap">
-			<header>
-				<a href="index.html" title="Homepage" id="logo">Perfect Car</a>
-				<span class="contact"><a href="perfectcar.html" title="info">About us</a></span>
-				<input type="text" class="field" placeholder="" />
+		<div class="navigation">
+			<div class="container">
+				<a href="#section-home" title="Homepage" id="logo">Perfect Car</a>
+
+				<a href="#section-about-us" title="info">About us</a>
+
 				<span class="right">
-					<span class="contact"><a href="reg.html" title="sign in">Sign in</a></span>
-					<span class="contact"><a href="auth.html" title="log in">Log in</a></span>
+					<!--<span class="contact"><a href="reg.html" title="sign in">Sign in</a></span>-->
+					<a href="#section-newsletter" title="log in">Log in</a>
 				</span>
-			</header>
-
-			<div class="clear"><br /></div>
-			<center>
-				<div id="menu">Perfect Car<hr /> </div>
-				<div id="menuHrefs">
-					<a href="index.html">Home</a>
-					<a href="perfectcar.html">About us</a>
-					<a href="feedback.html">Contact</a>
-				</div>
-			</center>
-			<div id="wrapper">
-				<div id="articles">
-					<article>
-						<img src="img/Sportscar-car-icon.png" alt="image" title="image">
-						<h2>Was ist PerfectCar?</h2>
-						<p>Lernen Sie alles &uuml;ber unser Projekt!</p>
-						<a href="perfectcar.html" title="Open">Mehr lesen</a>
-					</article>
-
-					<article>
-						<img src="img/mobile_icon.png" alt="image" title="image">
-						<h2>Mobile App herunterladen</h2>
-						<p>Erstellen Sie Ihr eigenes Design im mobile App!</p>
-						<a href="application_download.html" title="Open">Mehr lesen</a>
-					</article>
-
-					<article>
-						<img src="img/img3.png" alt="image" title="image">
-						<h2>Header</h2>
-						<p>text</p>
-						<a href="article.html" title="Open">Read more</a>
-					</article>
-				</div>
-
-				<div class="clear">
-					<div id="main_soc_block">
-						<center>
-						<div id="main_soc_block_in">
-							<h3>Configurator</h3>
-							<p>Create your perfect car!</p>
-							<a href="reg.html" title= "register">Start now</a>
-						</div>
-						</center>
-					</div>
-				</div>
-
-			<div class="clear"><br/></div>
+			</div>
 		</div>
 
-		<footer>
-			<span class="left">&copy 2019</span>
-			<span class="right">Contact us<img src="img/FB.png" alt="Facebook" title="Facebook" ></span>
-		</footer>
+		<div class="content"><div class="scroll-content">
+			<div class="container">
+				<div id="section-home" class="section">
+					<h1>Autokauf der Zukunft</h1>
+				</div>
 
+				<div id="section-newsletter" class="section">
+					<form action="" method="post">
+						<label for="name">Name</label>	
+						<input type="text" id="name" name="name" placeholder="Input your Name" />
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="adress@example.com" />	
+
+						<input type="submit" value="Send" id="send" name="send" />
+					</form>
+				</div>
+
+				<div id="section-about-us" class="section">
+					<h1>PerfectCar</h1>
+
+					<h2><a id ="alphaauto"></a>AlphaAuto AG</h2>
+						<p>AlphaAuto AG ist eine in Deutschland ansässige Autohandels-Kette mit 700 Mitarbeitern und ca. 340 Mio Euro Umsatz im Jahr. Der Gesellschaft gehören 13 Filialen im deutschsprachigen Raum an, während die Geschäftsführung von Stuttgart aus operiert.</p>
+						<p>Wir entwickeln gemeinsam einen Geschäftsbereich weiter, der den Kunden erlaubt, ihr gewünschtes Auto bis ins Detail zu individualisieren. Dabei kommt AlphaAuto auf uns zu, da wir direkt in den Geschäftsprozess eingreifen, in ihre Struktur hineinsehen und ein detailliertes, aber benutzerfreundliches und innovatives Tool für diesen Bereich schaffen sollen. AlphaAuto wird dieses mit großem Werbedruck im gesamten DACH-Raum ausrollen. Wir werden sowohl Zugang zur Geschäftsführung, als auch ausgewählten Filialleitern und Mitarbeitern nach Wunsch erhalten, um Informationen zu sammeln und Tests durchzuführen.</p>
+						<p>Wir sollen, ganz nach unserem Slogan “Reimagine your Industry” vom Standpunkt ihrer potenziellen Kunden und Interessenten einen innovativen Auto Konfigurator schaffen, der gleichzeitig intern bei AlphaAuto die Effizienz und Produktivität spürbar verbessern soll.</p>
+					
+					<h2><a id ="situation"></a>Die Situation vor PerfectCar</h2>
+						<ul>
+							<li>Filialen sind voneinander sehr weit entfernt (Sogar Ballungsgebiete werden nicht abgedeckt)</li>
+							<li>Online-Kauf von Autos funktioniert nicht gut</li>
+							<li>Es gibt keinen bestehenden Online-Shop oder keine Online-Anzeige der verfügbaren Autos</li>
+							<li>Um die verschiedenen Konfigurationen präsentieren zu können, wird viel Fläche in den Filialen benötigt</li>
+							<li>Viele Mitarbeiter beschäftigen sich damit, die einzelnen Konfigurationen zu erklären</li>
+							<li>Es gibt keine einheitliche Methode, die verschiedenen Konfigurationen der verschiedenen Hersteller zu präsentieren (Manchmal vom Katalog, manchmal gibt es einzelne Teile in der Filiale, Farbtabellen, Stoffauswahl - aber auch nicht vollständig, verschiedenes Holz ist manchmal als Foto und manchmal real vorhanden)</li>
+							<li>Der Kunde muss für seine Konfiguration sich lange in der Filiale mit einem Mitarbeiter beschäftigen</li>
+							<li>Es gibt keine Möglichkeit, die CO2 Effizienz zu vergleichen</li>
+
+						</ul>
+					<h2><a id ="tool"></a>Das Tool PerfectCar</h2>
+						<p>Wie bereits erwähnt soll das Tool eine völlig personalisierte Autokonfiguration für den Kunden ermöglichen. Dies wird über ein Online-Tool sowie native Mobilapplikationen geschehen. Dabei soll unser Tool die folgenden Anforderungen des Kunden erfüllen, um einen Soll-Zustand zu erreichen:</p>
+						<ul>
+							<li>Das Tool soll visuell ansprechende Modelle der verschiedensten Konfiguration zeigen können.</li>
+							<li>Der Kunde muss den Einkauf direkt im Webtool bequem durchführen können (auch mit verschiedenen Zahlungssystemen)</li>
+							<li>Zahlungssystem muss sich in die bereits vorhandenen Rechnungssysteme des Unternehmens einfügen können</li>
+							<li>Bedienung muss für Kunden aber auch Mitarbeiter intuitiv sein.</li>
+							<li>Möglichkeit Informationen im Tool direkt an den Kunde weiterzugeben (zum Beispiel mithilfe von Pop-ups etc)</li>
+							<li>Dem Kunden sollen weitere Produkte, ausgewählt nach seinen Präferenzen und den bereits ausgewählten Produkten zum upselling angeboten werden</li>
+							<li>Statistiken über die Aktivitäten der Kunden werden gesammelt um Analyse der Präferenzen o.ä. durchführen zu können</li>
+							<li>Möglichkeit für den Kunden im Zweifelsfalle doch einen Mitarbeiter (via Live-Chat oder Telefon) zu kontaktieren</li>
+						</ul>
+					<h2><a id ="verbessernunternehmen"></a>Wie PerfectCar die Situation des Unternehmens verbessert</h2>
+						<ul>
+							<li>Der Autoverkauf funktioniert schneller und effizienter durch die Möglichkeit das gesamte Fahrzeug online individuell zu konfigurieren und dann auch dort zu kaufen</li>
+							<li>Es braucht weniger Mitarbeiter, die Beratung durchführen, da der Kunde selbst den Aufbau im Konfigurator sehen kann, und auch Informationstexte über das Fahrzeug bekommt</li>
+							<li>Verkaufsfläche wird eingespart und dadurch auch Ressourcen (wie Miete etc.)</li>
+							<li>Es gibt eine einheitliche Datenbank, durch die nicht nur der Kunde einen besseren Überblick über die Situation hat, sondern auch die Mitarbeiterschulung effizienter wird</li>
+							<li>Durch Datenanalyse werden die Trends beim Autokauf bekannter und der Autohändler kann spezifischer entscheiden welche Modelle/Komponenten in welchen Mengen produziert werden.</li>
+
+						</ul>
+					<h2><a id ="verbessernkunde"></a>Wie PerfectCar Ihr Erlebnis als Kunde verbessert</h2>
+				</div>
+
+				<div id="section-contact" class="section">
+					<form action="" method="post">
+						<label for="subject">Subject</label>
+						<input type="text" id="subject" name="subject" placeholder="Input subject" />
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="adress@example.com" />	
+						<label for="name">Name</label>	
+						<input type="text" id="name" name="name" placeholder="Input your Name" />
+						<label for="message">Message</label>
+						<textarea placeholder="Input your message" id="message" name="message"></textarea>
+
+						<input type="submit" value="Send" id="send" name="send" />
+					</form>
+				</div>
+			</div>
+		</div></div>
+
+		<div class="footer">
+			<div class="container">
+				<span class="left">&copy 2019</span>
+				<span class="right">Contact us<img src="img/FB.png" alt="Facebook" title="Facebook" ></span>
+			</div>
+		</div>
 	</body>
 </html>
