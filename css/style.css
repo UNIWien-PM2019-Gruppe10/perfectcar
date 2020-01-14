@@ -1,354 +1,128 @@
-@charset "utf-8"
-*{
-	margin: 0;
-	padding: 0;	
+html, body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Sans-serif;
 }
 
-html{height: 100%}
-
-body{
-	width: 100%;
-	height: 100%;
-	color: #333;
-	background: #f7f7f7;
-	font-size: 1em;
-	font-family: "Segoe UI", sans-serif;
-	line-height: 135%  
-}
-		/*text:about us, sign in , log in*/
-a{
-	color: #696969;
-	text-decoration: none;
-	transition: all.6s ease;
-	-moz-transition: all.6s ease;
-	-webkid-transition: all.6s ease;
-	-ms-transition: all.6s ease;
+div, table, tr, td{
+	box-sizing: border-box;
 }
 
-a:hover {						/*ссылка при наведении*/						
-	color: black;
-	text-decoration: none;
-	transition: all.6s ease;
-	-moz-transition: all.6s ease;
-	-webkid-transition: all.6s ease;
-	-ms-transition: all.6s ease;
+form, input, label{
+	display: block;
 }
-
-a:active {color: #8ce4a6}		/*ссылка при нажатии*/
 
 img{
 	max-width: 100%;
-	height: auto;
-	width: auto\9;      /*чтобы корректно сжимало изображение*/
 }
 
-hr{
+.navigation{
+	z-index: 999;
+	position: fixed;
+	top: 0px;
 	display: block;
-	border:0;
-	height: 1px;
-	border-top: 1px solid #ccc;
-	padding:0;
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	background-image:url(../img/bg.jpg);
+	background-size: cover;
+	background-position-y: bottom;
+}
+.navigation, .footer{
+	color: white;
+}
+.navigation a, .navigation a:active, .navigation a:visited,
+.footer a, .footer a:active, .footer a:visited{
+	color: white;
+}
+.navigation .right a{
+	margin: 0px 15px;
 }
 
-
-.right{float: right}
-.left{float: left}
-.clear{clear: both}
-
-/*Selection Block*/
-::selection{background: #f58b8b; color: #fff}      /*выделение одним цветом, текст белым*/
-::-moz-selection{background: #f58b8b; color: #fff}
-
-header, footer{
-	width: 98%;
-	background-color: #fff;
-	/*min-height: 50px;*/
-	float:left;
+.content{
+	z-index: 99;
+	margin-top: 70px;
+	margin-bottom: 120px;
+	position: relative;
+	width: 100%;
+	overflow: auto;
+	background: white;
 }
 
-header{
-	border-bottom: 2px solid silver;
-	padding: 1%; 						/*справа и слева по 1% отступа*/
+.footer{
+	z-index: 9;
+	height: 120px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	padding-top: 20px;
+	color: white;
+	background-image:url(../img/bg.jpg);
+	background-size: cover;
 }
 
-#logo{
-	font-size: 1.3em;
-	font-family: Comic Sans MS, sans-serif;
-	color: #003366; 
+.container{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.contact{
-	font-size: 1.3em;
-	font-family: Comic Sans MS, sans-serif;
-	margin-left: 20px;
+.section{
+	display: block;
+	width:100%;
+	clear: both;
+	position: relative;
 }
 
-input[type=text].field {
-	border-radius: 5px;
-	border: 2px solid silver;
-	padding: 5px;
-	margin-left: 20px;
-	outline: none;				/*убрали обводку при нажатии на поисковое поле*/
+.paragraph{
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
-input[type=text].field:focus{		/*когда нажали на поле*/
-	border: 2px solid #f58b8b;
+.parallax-layer{
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	display: block;
+	position: absolute;
+	background-size: cover;
+	background-position: center center;
 }
 
-
-#menu{
-	color: #666;
-	font-family: Comic sans MS, sans-serif;
-	font-size: 1.7em;
+.right{
+	float: right;
 }
 
-#menu hr{
-	width: 500px;
-	max-width: 100%;
-	margin-top: 5px;
-	margin-bottom: 10;
-}
-
-#menuHrefs a{
-	padding: 5px;
-	border-radius: 5px;
-	margin-right: 5px;
-	color: #626262
-}
-
-/*при наведении мышки*/
-#menuHrefs a:hover{ background-color: #ececec }
-
-/*Основные стили для сайта*/
-
-#wrapper{
+.left{
 	float: left;
-	width:100%;	
-	margin-top: 10px;
-}	
-
-#wrapper #articles{
-	float: left;
-	width:80%;
-	margin-left: 10%;	
 }
 
-#wrapper #articles article{
-	float: left;
-	border: 1px solid silver;
-	box-sizing: border-box;
-	border-radius: 5px;
-	background-color: #fafafa;
-	min-height: 400px;
+.dark-title{
+	display: inline-block;
+	background: rgba(0,0,0,0.5);
+	padding: 10px 30px;
+	color: white;
 }
 
-@media(min-width: 900px){
-	#wrapper #articles article{
-		width: 31.33333%;
-		margin-right: 2%;
-		
-	}
+/* ======================================================== */
+
+#section-home{
+	height: 80vh;
+}
+#section-home .container{
+	padding-top: 100px;
 }
 
-@media(max-width: 899px) and (min-width: 700px){
-	#wrapper #articles article{
-		width: 80%;
-		margin-left: 10%;
-		margin-bottom: 10px;
-	}
-}
+/* ======================================================== */
 
-@media(max-width: 699px){			/*адаптивность, если экран от 700px и ниже */
+/*
+@media(max-width: 699px){
 	#wrapper #articles article{
 		width: 100%;
 		margin-bottom: 10px;
 	}
 }
+*/
 
-#wrapper #articles article img{
-	width: 40%;
-	height: 140px;
-	border-radius: 5px 5px 0px 0px;
-/*	border-bottom: 1px solid silver; */
-	margin-bottom: 10px;
-	margin-left: 100px;
-	margin-top: 10px;
-}
-
-/*Заголовок*/
-
-#wrapper #articles article h2{
-	width: 90%;
-	margin-left: 5%;
-	font-weight: normal;
-	font-size:1.7em;	
-	color: #424242
-}
-
-/*текст под заголовком*/
-#wrapper #articles article p{
-	width: 80%;
-	margin-left: 10%;
-	text-indent: 1em;
-}
-
-/*ссылка "читать далее"*/
-#wrapper #articles article a{
-	padding: 5px;
-	background-color: #708090; 
-	margin-left: 5%;
-	border-radius: 5px;
-	color: #fff;
-	float: left;
-	margin-top: 10px; 
-}
-
-#wrapper #articles article a:hover{
-	background-color: #fff;
-	color: silver;
-	border: 2px solid silver; 
-}
-
-/* AboutUS */
-#aboutUs{
-	width:60%;
-	float: left;
-	background-color: #fafafa;
-	border-radius: 5px;
-	border: 1px solid silver;
-	box-sizing: border-box;
-	padding: 1%;
-}
-
-#columRight{
-	width: 30%;
-	float: left;
-	margin-left: 5%;
-	background-color: #fafafa;
-	border-radius: 5px;
-	border: 1px solid silver;
-	box-sizing: border-box;
-	padding: 1%;
-}
-
-/*стили для формы*/
-form{
-	width: 60%;
-	margin-left: 20%;
-	float: left; 
-}
-
-form label{
-	float: left;
-	width: 100%;
-	margin-bottom: 10px;
-}
-
-form input {
-	border-radius: 5px;
-	border: 2px solid silver;
-	padding: 5px;
-	float: left;
-	clear: both;
-	width: 40%;
-	background-color: #fafafa;
-	margin-bottom: 10px;		
-}
-
-form input:focus, form textarea:focus {		/*когда нажали на поле*/
-	border: 2px solid #191970;
-}
-
-form textarea{
-	width: 60%;
-	float: left;
-	clear: both;
-	background-color: #fafafa;
-	border: 2px solid silver; 
-	border-radius: 5px;
-	padding: 10px;
-	font-size: 1.7em;
-}
-
-form #send{
-	float: left;
-	padding: 5px;
-	background-color: #003366;
-	cursor: pointer;
-	border-radius: 5px;
-	margin-top: 10px;
-	font-size: 1.5em;
-	color: #fff;
-}
-
-form #send:hover{		/*эффект при наведении*/
-	background-color: silver;
-}
-
-/*центральный блок сайта*/
-#main_soc_block{
-	width:100%;
-	padding: 2% 0 ; 
-	border-bottom: 2px solid silver;
-	border-top: 2px solid silver; 
-	margin: 20px 0; 
-	float: left;
-	background: url('../img/bg.jpg') repeat-x center 0;
-	height: 200px;
-}
-
-#main_soc_block_in{
-	text-align: center;
-	padding:1%;
-	height: 200px;
-	color: black;
-	background-color: #fafafa;
-	border: 1px solid silver;
-	box-sizing: border-box;
-	border-radius: 7px;
-	width: 500px;
-	max-width: 98%;
-}
-
-	/*start now bottom*/
-#main_soc_block_in a{
-	float: left;
-	padding:  5px;
-	background-color: #003366;
-	border-radius: 6px;
-	color: white;
-	margin-left: 40%;
-
-}
-
-footer{
-	padding: 1%; 
-	border-top: 2px solid silver;
-	margin-top: 10px;
-	padding-bottom: 2%;
-}
-
-footer img {width: 20%; float: left; margin-right: 5px}
-
-#page-wrap:after{
-	content: "";
-	display: block; 
-}
-
-footer, #page-wrap:after{height: 10px}
-
-
-#page-wrap{								
-	min-height: 100%;
-	margin-bottom: -10px;
-}
-
-
-
-
-
-
-
-
-
+/* ======================================================== */
 
