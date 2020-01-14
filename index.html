@@ -2,10 +2,17 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="keywords" content="test, site, website" />
-		<meta name="description" content="Example" />
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
 		<link href="img/caricon.png" rel="shortcut icon" type="image/x-icon" />
+
+		<link href="http://cdn.muicss.com/mui-0.10.0/css/mui.min.css" rel="stylesheet" type="text/css" />
+		<script src="http://cdn.muicss.com/mui-0.10.0/js/mui.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="js/main.js"></script>
+
 		<title>Perfect Car</title>
 	</head>
 
@@ -14,35 +21,52 @@
 			<div class="container">
 				<a href="#section-home" title="Homepage" id="logo">Perfect Car</a>
 
-				<a href="#section-about-us" title="info">About us</a>
-
 				<span class="right">
 					<!--<span class="contact"><a href="reg.html" title="sign in">Sign in</a></span>-->
-					<a href="#section-newsletter" title="log in">Log in</a>
+					<a href="#section-vision" title="info">Our Vision</a>
+					<a href="#section-newsletter" title="info">Newsletter</a>
+					<a href="#section-about-us" title="info">About us</a>
+					<a href="#section-contact" title="log in">Contact</a>
+					<a href="javascript:alert('Login not available. Please subscribe!')" title="log in">Log in</a>
 				</span>
 			</div>
 		</div>
 
-		<div class="content"><div class="scroll-content">
+		<div class="content">
+			<div id="section-home" class="section">
+				<div class="parallax-layer" style="background-image: url('img/bg-top.jpg')"></div>
+
+				<div class="container">
+					<div class="dark-title">
+						<h1>Autokauf der Zukunft</h1>
+					</div>
+				</div>
+			</div>
+
 			<div class="container">
-				<div id="section-home" class="section">
-					<h1>Autokauf der Zukunft</h1>
+				<div id="section-vision" class="section paragraph">
+					<h1>PerfectCar</h1>
+
+					<img src="img/vision.jpg" />
 				</div>
 
-				<div id="section-newsletter" class="section">
-					<form action="" method="post">
-						<label for="name">Name</label>	
-						<input type="text" id="name" name="name" placeholder="Input your Name" />
-						<label for="email">Email</label>
-						<input type="email" id="email" name="email" placeholder="adress@example.com" />	
+				<div id="section-newsletter" class="section paragraph">
+					<form class="mui-form" action="" method="post">
+						<legend>Sign Up for Updates!</legend>
+						<div class="mui-textfield">
+							<label for="name">Name</label>	
+							<input type="text" id="name" name="name" placeholder="Input your Name" />
+						</div>
+						<div class="mui-textfield">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" placeholder="adress@example.com" />	
+						</div>
 
-						<input type="submit" value="Send" id="send" name="send" />
+						<input class="mui-btn mui-btn--raised mui-btn--primary" type="submit" value="Send" id="send" name="send" />
 					</form>
 				</div>
 
-				<div id="section-about-us" class="section">
-					<h1>PerfectCar</h1>
-
+				<div id="section-about-us" class="section paragraph">
 					<h2><a id ="alphaauto"></a>AlphaAuto AG</h2>
 						<p>AlphaAuto AG ist eine in Deutschland ansässige Autohandels-Kette mit 700 Mitarbeitern und ca. 340 Mio Euro Umsatz im Jahr. Der Gesellschaft gehören 13 Filialen im deutschsprachigen Raum an, während die Geschäftsführung von Stuttgart aus operiert.</p>
 						<p>Wir entwickeln gemeinsam einen Geschäftsbereich weiter, der den Kunden erlaubt, ihr gewünschtes Auto bis ins Detail zu individualisieren. Dabei kommt AlphaAuto auf uns zu, da wir direkt in den Geschäftsprozess eingreifen, in ihre Struktur hineinsehen und ein detailliertes, aber benutzerfreundliches und innovatives Tool für diesen Bereich schaffen sollen. AlphaAuto wird dieses mit großem Werbedruck im gesamten DACH-Raum ausrollen. Wir werden sowohl Zugang zur Geschäftsführung, als auch ausgewählten Filialleitern und Mitarbeitern nach Wunsch erhalten, um Informationen zu sammeln und Tests durchzuführen.</p>
@@ -84,27 +108,35 @@
 					<h2><a id ="verbessernkunde"></a>Wie PerfectCar Ihr Erlebnis als Kunde verbessert</h2>
 				</div>
 
-				<div id="section-contact" class="section">
-					<form action="" method="post">
-						<label for="subject">Subject</label>
-						<input type="text" id="subject" name="subject" placeholder="Input subject" />
-						<label for="email">Email</label>
-						<input type="email" id="email" name="email" placeholder="adress@example.com" />	
-						<label for="name">Name</label>	
-						<input type="text" id="name" name="name" placeholder="Input your Name" />
-						<label for="message">Message</label>
-						<textarea placeholder="Input your message" id="message" name="message"></textarea>
+				<div id="section-contact" class="section paragraph">
+					<form class="mui-form" action="" method="post">
+						<div class="mui-textfield">
+							<label for="subject">Subject</label>
+							<input type="text" id="subject" name="subject" placeholder="Input subject" />
+						</div>
+						<div class="mui-textfield">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" placeholder="adress@example.com" />	
+						</div>
+						<div class="mui-textfield">
+							<label for="name">Name</label>	
+							<input type="text" id="name" name="name" placeholder="Input your Name" />
+						</div>
+						<div class="mui-textfield">
+							<label for="message">Message</label>
+							<textarea placeholder="Input your message" id="message" name="message"></textarea>
+						</div>
 
-						<input type="submit" value="Send" id="send" name="send" />
+						<input class="mui-btn mui-btn--raised mui-btn--primary" type="submit" value="Send" id="send" name="send" />
 					</form>
 				</div>
 			</div>
-		</div></div>
+		</div>
 
 		<div class="footer">
 			<div class="container">
 				<span class="left">&copy 2019</span>
-				<span class="right">Contact us<img src="img/FB.png" alt="Facebook" title="Facebook" ></span>
+				<span class="right"><a href="#">AlphaAuto on Facebook</a></span>
 			</div>
 		</div>
 	</body>
